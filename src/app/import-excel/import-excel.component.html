@@ -1,0 +1,53 @@
+
+<div class="container">
+    
+    
+    <div class="row">
+        <div class="col-md">
+            <h3>
+                Ovdje mozete preuzeti potrebne fajlove za ispis
+            </h3>
+            <br>
+            <br>
+        
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <a target="_self" href="../../assets/Pomocni Zkalk.xlsx" download="Pomocni Zkalk">Preuzmi obrarazac za pomocni Zkalk</a>
+            
+        </div>
+
+        <br>
+        <br>
+        <div>
+            <a target="_self" href="../../assets/pomocni za stavke.xlsx" download="Pomocni za stavke">Preuzmi obrarazac za pomocniZaStavke</a>
+        </div>
+
+    </div>
+        
+    <br>
+    <br>
+
+
+    <div class="row">
+        <div class="col-md"> 
+            <h3>
+                Unesite fajlove sa podacima :
+            </h3>
+            <br>
+            <form [formGroup] = "unosFajlovi" >
+                <input type="file" formControlName="pomocniZaKalk" (change)="uploadExcel1($event)">
+                <input type="file" formControlName="pomocniZaStavke" (change)="uploadExcel2($event)" > 
+                <button class="btn btn-primary" [disabled]="!unosFajlovi.valid" (click)="submit()">Submit</button>
+                
+            </form>
+            
+        </div>
+
+    </div>
+
+
+
+</div>
+
